@@ -1,0 +1,13 @@
+#Particle count, trail length and dynamic light budget preset.
+#Allowed Values: LOW, MEDIUM, HIGH
+vfxQuality = "HIGH"
+#Short-lived light from muzzle flashes and impacts. Glow effects stay on when disabled.
+dynamicLights = true
+#Hard cap on simultaneous dynamic lights; the preset may lower it further.
+#Range: 0 ~ 64
+maxDynamicLights = 24
+#Camera shake from nearby heavy shots and turret destruction (accessibility).
+cameraShake = true
+#Brief screen flash when a turret is destroyed very close by (accessibility).
+screenFlash = true
+

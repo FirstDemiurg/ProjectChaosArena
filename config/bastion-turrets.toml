@@ -1,0 +1,1435 @@
+
+#Bastion Turrets: weapon stats. Each value starts at the mod's own number ("Mod default" in its comment).
+#  Left at that number, the weapon stays as the mod (or a datapack in data/bastion/turret_weapons) makes it.
+#  Any other number replaces it. A number out of range, or text in quotes, is reset to the mod's number (see the log).
+#Times are in ticks (20 ticks = 1 second), distances in blocks, angles in degrees.
+#A stat a weapon does not use (for example spread on the Tesla Coil) has no effect.
+#Saving this file while the game runs applies it at once. On a server, the server's copy of this file counts.
+#Gun Turret
+[gun]
+	#Targeting range in blocks.
+	#Mod default: 32
+	#Range: 0.5 ~ 256
+	range = 32
+	#Ticks between shots (lower = faster).
+	#Mod default: 12
+	#Range: 0.5 ~ 12000
+	fire_interval = 12
+	#Damage per hit.
+	#Mod default: 7
+	#Range: 0 ~ 10000
+	damage = 7
+	#Inaccuracy in degrees.
+	#Mod default: 0.3
+	#Range: 0 ~ 90
+	spread = 0.3
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 9
+	#Range: 0 ~ 180
+	turn_speed = 9
+	#Degrees off target it still fires at.
+	#Mod default: 1.5
+	#Range: 0 ~ 180
+	aim_tolerance = 1.5
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 3
+	#Range: 0 ~ 200
+	aim_lock_ticks = 3
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -35
+	#Range: -90 ~ 90
+	min_pitch = -35
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Bullet speed in blocks per tick.
+	#Mod default: 6
+	#Range: 0.01 ~ 100
+	bullet_speed = 6
+	#Damage multiplier on a headshot.
+	#Mod default: 1.5
+	#Range: 0 ~ 100
+	headshot_multiplier = 1.5
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+	#Damage multiplier of the shot after holding a target for precision_lock_ticks.
+	#Mod default: 1.5
+	#Range: 0 ~ 100
+	precision_lock_multiplier = 1.5
+	#Ticks on one target before the precision shot.
+	#Mod default: 20
+	#Range: 0 ~ 12000
+	precision_lock_ticks = 20
+
+#Machine Gun Turret
+[machine_gun]
+	#Targeting range in blocks.
+	#Mod default: 24
+	#Range: 0.5 ~ 256
+	range = 24
+	#Ticks between shots (lower = faster).
+	#Mod default: 1.6667
+	#Range: 0.5 ~ 12000
+	fire_interval = 1.6667
+	#Damage per hit.
+	#Mod default: 2.5
+	#Range: 0 ~ 10000
+	damage = 2.5
+	#Inaccuracy in degrees.
+	#Mod default: 1.5
+	#Range: 0 ~ 90
+	spread = 1.5
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 0.5
+	#Range: 0 ~ 1
+	ammo_per_shot = 0.5
+	#Degrees the weapon turns per tick.
+	#Mod default: 11
+	#Range: 0 ~ 180
+	turn_speed = 11
+	#Degrees off target it still fires at.
+	#Mod default: 3
+	#Range: 0 ~ 180
+	aim_tolerance = 3
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 1
+	#Range: 0 ~ 200
+	aim_lock_ticks = 1
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -30
+	#Range: -90 ~ 90
+	min_pitch = -30
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 30
+	#Range: 0 ~ 180
+	sweep_tolerance = 30
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 1.2
+	#Range: 0 ~ 1000
+	heat_per_shot = 1.2
+	#Heat lost per second.
+	#Mod default: 8
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 8
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Bullet speed in blocks per tick.
+	#Mod default: 5
+	#Range: 0.01 ~ 100
+	bullet_speed = 5
+	#Spread in degrees while hot.
+	#Mod default: 4
+	#Range: 0 ~ 90
+	hot_spread = 4
+	#Share of max heat (0 to 1) above which hot_spread applies.
+	#Mod default: 0.7
+	#Range: 0 ~ 1
+	hot_spread_threshold = 0.7
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+	#Barrel spin (0 to 1) needed before it fires.
+	#Mod default: 0.1
+	#Range: 0 ~ 1
+	min_spin_to_fire = 0.1
+	#Level of the Slowness its hits apply (0 = Slowness I).
+	#Mod default: 0
+	#Range: 0 ~ 10
+	slowness_amplifier = 0
+	#Ticks of Slowness per hit.
+	#Mod default: 20
+	#Range: 0 ~ 12000
+	slowness_ticks = 20
+	#Ticks the barrels take to spin down.
+	#Mod default: 30
+	#Range: 1 ~ 12000
+	spin_down_ticks = 30
+	#Ticks the barrels take to spin up.
+	#Mod default: 20
+	#Range: 1 ~ 12000
+	spin_up_ticks = 20
+
+#Shotgun Turret
+[shotgun]
+	#Targeting range in blocks.
+	#Mod default: 12
+	#Range: 0.5 ~ 256
+	range = 12
+	#Ticks between shots (lower = faster).
+	#Mod default: 24
+	#Range: 0.5 ~ 12000
+	fire_interval = 24
+	#Damage per hit.
+	#Mod default: 5
+	#Range: 0 ~ 10000
+	damage = 5
+	#Inaccuracy in degrees.
+	#Mod default: 12
+	#Range: 0 ~ 90
+	spread = 12
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 10
+	#Range: 0 ~ 180
+	turn_speed = 10
+	#Degrees off target it still fires at.
+	#Mod default: 3
+	#Range: 0 ~ 180
+	aim_tolerance = 3
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 2
+	#Range: 0 ~ 200
+	aim_lock_ticks = 2
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -30
+	#Range: -90 ~ 90
+	min_pitch = -30
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Bullet speed in blocks per tick.
+	#Mod default: 4
+	#Range: 0.01 ~ 100
+	bullet_speed = 4
+	#Distance in blocks where pellet damage bottoms out.
+	#Mod default: 12
+	#Range: 0 ~ 256
+	falloff_end = 12
+	#Share of pellet damage left at falloff_end (0 to 1).
+	#Mod default: 0.4
+	#Range: 0 ~ 1
+	falloff_min = 0.4
+	#Distance in blocks where pellet damage starts to drop.
+	#Mod default: 6
+	#Range: 0 ~ 256
+	falloff_start = 6
+	#Knockback strength (Repulsor: about how many blocks a target is thrown; Repulsor Dome: that at the edge of its reach, +1 block per block closer).
+	#Mod default: 1.2
+	#Range: 0 ~ 100
+	knockback = 1.2
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+	#Pellets per shot.
+	#Mod default: 8
+	#Range: 1 ~ 64
+	pellets = 8
+
+#Sniper Turret
+[sniper]
+	#Targeting range in blocks.
+	#Mod default: 64
+	#Range: 0.5 ~ 256
+	range = 64
+	#Ticks between shots (lower = faster).
+	#Mod default: 30
+	#Range: 0.5 ~ 12000
+	fire_interval = 30
+	#Damage per hit.
+	#Mod default: 24
+	#Range: 0 ~ 10000
+	damage = 24
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 6
+	#Range: 0 ~ 180
+	turn_speed = 6
+	#Degrees off target it still fires at.
+	#Mod default: 0.6
+	#Range: 0 ~ 180
+	aim_tolerance = 0.6
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 4
+	#Range: 0 ~ 200
+	aim_lock_ticks = 4
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -35
+	#Range: -90 ~ 90
+	min_pitch = -35
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Extra targets each round passes through.
+	#Mod default: 1
+	#Range: 0 ~ 64
+	base_pierce = 1
+	#Bullet speed in blocks per tick.
+	#Mod default: 12
+	#Range: 0.01 ~ 100
+	bullet_speed = 12
+	#Ticks it charges before each shot.
+	#Mod default: 30
+	#Range: 0 ~ 12000
+	charge_ticks = 30
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+
+#Rocket Launcher Turret
+[rocket_launcher]
+	#Targeting range in blocks.
+	#Mod default: 40
+	#Range: 0.5 ~ 256
+	range = 40
+	#Ticks between shots (lower = faster).
+	#Mod default: 36
+	#Range: 0.5 ~ 12000
+	fire_interval = 36
+	#Damage per hit.
+	#Mod default: 8
+	#Range: 0 ~ 10000
+	damage = 8
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 7
+	#Range: 0 ~ 180
+	turn_speed = 7
+	#Degrees off target it still fires at.
+	#Mod default: 2.5
+	#Range: 0 ~ 180
+	aim_tolerance = 2.5
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 3
+	#Range: 0 ~ 200
+	aim_lock_ticks = 3
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -35
+	#Range: -90 ~ 90
+	min_pitch = -35
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Knockback strength (Repulsor: about how many blocks a target is thrown; Repulsor Dome: that at the edge of its reach, +1 block per block closer).
+	#Mod default: 1
+	#Range: 0 ~ 100
+	knockback = 1
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.8
+	#Range: 0 ~ 1
+	lead_accuracy = 0.8
+	#Closest distance in blocks it fires at.
+	#Mod default: 4
+	#Range: 0 ~ 256
+	min_range = 4
+	#Rocket speed in blocks per tick.
+	#Mod default: 1.4
+	#Range: 0.01 ~ 100
+	rocket_speed = 1.4
+	#Salvo mode: ticks between the rounds of a salvo (0 = all at once).
+	#Mod default: 0
+	#Range: 0 ~ 200
+	salvo_interval = 0
+	#Splash damage to targets around the impact.
+	#Mod default: 12
+	#Range: 0 ~ 10000
+	splash_damage = 12
+	#Splash radius in blocks.
+	#Mod default: 3.5
+	#Range: 0 ~ 64
+	splash_radius = 3.5
+
+#Flamethrower Turret
+[flamethrower]
+	#Targeting range in blocks.
+	#Mod default: 8
+	#Range: 0.5 ~ 256
+	range = 8
+	#Ticks between shots (lower = faster).
+	#Mod default: 2
+	#Range: 0.5 ~ 12000
+	fire_interval = 2
+	#Damage per hit.
+	#Mod default: 1.2
+	#Range: 0 ~ 10000
+	damage = 1.2
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 0.025
+	#Range: 0 ~ 1
+	ammo_per_shot = 0.025
+	#Degrees the weapon turns per tick.
+	#Mod default: 9
+	#Range: 0 ~ 180
+	turn_speed = 9
+	#Degrees off target it still fires at.
+	#Mod default: 10
+	#Range: 0 ~ 180
+	aim_tolerance = 10
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 1
+	#Range: 0 ~ 200
+	aim_lock_ticks = 1
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -40
+	#Range: -90 ~ 90
+	min_pitch = -40
+	#Highest barrel angle in degrees.
+	#Mod default: 60
+	#Range: -90 ~ 90
+	max_pitch = 60
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 180
+	#Range: 0 ~ 180
+	sweep_tolerance = 180
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Damage per second while burning.
+	#Mod default: 3
+	#Range: 0 ~ 10000
+	burn_damage = 3
+	#Ticks a target keeps burning.
+	#Mod default: 80
+	#Range: 0 ~ 12000
+	burn_ticks = 80
+	#Half-angle of its cone in degrees.
+	#Mod default: 16
+	#Range: 0 ~ 180
+	cone_angle = 16
+
+#Laser Rifle Turret
+[laser_rifle]
+	#Targeting range in blocks.
+	#Mod default: 40
+	#Range: 0.5 ~ 256
+	range = 40
+	#Ticks between shots (lower = faster).
+	#Mod default: 50
+	#Range: 0.5 ~ 12000
+	fire_interval = 50
+	#Damage per hit.
+	#Mod default: 28
+	#Range: 0 ~ 10000
+	damage = 28
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 6
+	#Range: 0 ~ 180
+	turn_speed = 6
+	#Degrees off target it still fires at.
+	#Mod default: 0.8
+	#Range: 0 ~ 180
+	aim_tolerance = 0.8
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 4
+	#Range: 0 ~ 200
+	aim_lock_ticks = 4
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -35
+	#Range: -90 ~ 90
+	min_pitch = -35
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Ticks it charges before each shot.
+	#Mod default: 50
+	#Range: 0 ~ 12000
+	charge_ticks = 50
+
+#Repulsor
+[repulsor]
+	#Targeting range in blocks.
+	#Mod default: 5
+	#Range: 0.5 ~ 256
+	range = 5
+	#Ticks between shots (lower = faster).
+	#Mod default: 30
+	#Range: 0.5 ~ 12000
+	fire_interval = 30
+	#Damage per hit.
+	#Mod default: 0
+	#Range: 0 ~ 10000
+	damage = 0
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#This weapon uses no ammo items (it runs on FE or loads its own rounds), so this stays 0.
+	#Mod default: 0
+	#Range: 0 ~ 0
+	ammo_per_shot = 0
+	#Degrees the weapon turns per tick.
+	#Mod default: 12
+	#Range: 0 ~ 180
+	turn_speed = 12
+	#Degrees off target it still fires at.
+	#Mod default: 15
+	#Range: 0 ~ 180
+	aim_tolerance = 15
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 0
+	#Range: 0 ~ 200
+	aim_lock_ticks = 0
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -90
+	#Range: -90 ~ 90
+	min_pitch = -90
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Ticks it charges before each shot.
+	#Mod default: 10
+	#Range: 0 ~ 12000
+	charge_ticks = 10
+	#Half-angle of its cone in degrees.
+	#Mod default: 35
+	#Range: 0 ~ 180
+	cone_angle = 35
+	#FE the turret's capacitor holds.
+	#Mod default: 10000
+	#Range: 0 ~ 3000000
+	energy_capacity = 10000
+	#FE per shot.
+	#Mod default: 500
+	#Range: 0 ~ 10000000
+	energy_per_shot = 2500
+	#Knockback strength (Repulsor: about how many blocks a target is thrown; Repulsor Dome: that at the edge of its reach, +1 block per block closer).
+	#Mod default: 4
+	#Range: 0 ~ 100
+	knockback = 4
+	#Upward push.
+	#Mod default: 0.35
+	#Range: 0 ~ 10
+	lift = 0.35
+	#Most FE it takes in per transfer.
+	#Mod default: 500
+	#Range: 0 ~ 10000000
+	max_input = 500
+
+#Ion Rifle Turret
+[ion_rifle]
+	#Targeting range in blocks.
+	#Mod default: 32
+	#Range: 0.5 ~ 256
+	range = 64
+	#Ticks between shots (lower = faster).
+	#Mod default: 16
+	#Range: 0.5 ~ 12000
+	fire_interval = 16
+	#Damage per hit.
+	#Mod default: 8
+	#Range: 0 ~ 10000
+	damage = 12
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#This weapon uses no ammo items (it runs on FE or loads its own rounds), so this stays 0.
+	#Mod default: 0
+	#Range: 0 ~ 0
+	ammo_per_shot = 0
+	#Degrees the weapon turns per tick.
+	#Mod default: 8
+	#Range: 0 ~ 180
+	turn_speed = 7
+	#Degrees off target it still fires at.
+	#Mod default: 1.5
+	#Range: 0 ~ 180
+	aim_tolerance = 1.5
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 3
+	#Range: 0 ~ 200
+	aim_lock_ticks = 5
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -35
+	#Range: -90 ~ 90
+	min_pitch = -35
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Bolt speed in blocks per tick.
+	#Mod default: 4
+	#Range: 0.01 ~ 100
+	bolt_speed = 4
+	#FE the turret's capacitor holds.
+	#Mod default: 40000
+	#Range: 0 ~ 3000000
+	energy_capacity = 500000
+	#FE per shot.
+	#Mod default: 1200
+	#Range: 0 ~ 10000000
+	energy_per_shot = 5000
+	#Damage the ion core deals to each other target around it.
+	#Mod default: 5
+	#Range: 0 ~ 10000
+	field_damage = 5
+	#Reach of the ion core in blocks.
+	#Mod default: 3
+	#Range: 0 ~ 64
+	field_radius = 3
+	#Ticks the ion core's beams stay visible.
+	#Mod default: 6
+	#Range: 0 ~ 200
+	field_ticks = 6
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+	#Most FE it takes in per transfer.
+	#Mod default: 1000
+	#Range: 0 ~ 10000000
+	max_input = 10000
+
+#Plasma Repeater Turret
+[plasma_repeater]
+	#Targeting range in blocks.
+	#Mod default: 24
+	#Range: 0.5 ~ 256
+	range = 24
+	#Ticks between shots (lower = faster).
+	#Mod default: 5
+	#Range: 0.5 ~ 12000
+	fire_interval = 5
+	#Damage per hit.
+	#Mod default: 5
+	#Range: 0 ~ 10000
+	damage = 5
+	#Inaccuracy in degrees.
+	#Mod default: 0.8
+	#Range: 0 ~ 90
+	spread = 0.8
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 0.1
+	#Range: 0 ~ 1
+	ammo_per_shot = 0.1
+	#Degrees the weapon turns per tick.
+	#Mod default: 10
+	#Range: 0 ~ 180
+	turn_speed = 10
+	#Degrees off target it still fires at.
+	#Mod default: 2
+	#Range: 0 ~ 180
+	aim_tolerance = 2
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 2
+	#Range: 0 ~ 200
+	aim_lock_ticks = 2
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -35
+	#Range: -90 ~ 90
+	min_pitch = -35
+	#Highest barrel angle in degrees.
+	#Mod default: 90
+	#Range: -90 ~ 90
+	max_pitch = 90
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 8
+	#Range: 0 ~ 1000
+	heat_per_shot = 8
+	#Heat lost per second.
+	#Mod default: 15
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 15
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Bolt speed in blocks per tick.
+	#Mod default: 1.5
+	#Range: 0.01 ~ 100
+	bolt_speed = 1.5
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+	#Splash damage to targets around the impact.
+	#Mod default: 3
+	#Range: 0 ~ 10000
+	splash_damage = 3
+	#Splash radius in blocks.
+	#Mod default: 1.2
+	#Range: 0 ~ 64
+	splash_radius = 1.2
+
+#Missile Launcher Turret
+[missile_launcher]
+	#Targeting range in blocks.
+	#Mod default: 48
+	#Range: 0.5 ~ 256
+	range = 48
+	#Ticks between shots (lower = faster).
+	#Mod default: 8
+	#Range: 0.5 ~ 12000
+	fire_interval = 8
+	#Damage per hit.
+	#Mod default: 7
+	#Range: 0 ~ 10000
+	damage = 7
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#This weapon uses no ammo items (it runs on FE or loads its own rounds), so this stays 0.
+	#Mod default: 0
+	#Range: 0 ~ 0
+	ammo_per_shot = 0
+	#Degrees the weapon turns per tick.
+	#Mod default: 6
+	#Range: 0 ~ 180
+	turn_speed = 6
+	#Degrees off target it still fires at.
+	#Mod default: 12
+	#Range: 0 ~ 180
+	aim_tolerance = 12
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 2
+	#Range: 0 ~ 200
+	aim_lock_ticks = 2
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: 30
+	#Range: -90 ~ 90
+	min_pitch = 30
+	#Highest barrel angle in degrees.
+	#Mod default: 30
+	#Range: -90 ~ 90
+	max_pitch = 30
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Missile: speed gained per tick, in blocks per tick per tick.
+	#Mod default: 0.07
+	#Range: 0 ~ 10
+	acceleration = 0.07
+	#Missile: top speed in blocks per tick.
+	#Mod default: 1.1
+	#Range: 0.01 ~ 100
+	cruise_speed = 1.1
+	#Missile: ticks of flight before its fuel runs out.
+	#Mod default: 120
+	#Range: 0 ~ 12000
+	fuel_ticks = 120
+	#Missile: ticks after launch before it starts steering.
+	#Mod default: 4
+	#Range: 0 ~ 200
+	homing_delay = 4
+	#Knockback strength (Repulsor: about how many blocks a target is thrown; Repulsor Dome: that at the edge of its reach, +1 block per block closer).
+	#Mod default: 0.5
+	#Range: 0 ~ 100
+	knockback = 0.5
+	#Missile: speed out of the tube in blocks per tick.
+	#Mod default: 0.55
+	#Range: 0.01 ~ 100
+	launch_speed = 0.55
+	#Closest distance in blocks it fires at.
+	#Mod default: 6
+	#Range: 0 ~ 256
+	min_range = 6
+	#Ticks to reload one tube.
+	#Mod default: 30
+	#Range: 1 ~ 12000
+	reload_ticks = 30
+	#Salvo mode: ticks between the rounds of a salvo (0 = all at once).
+	#Mod default: 2
+	#Range: 0 ~ 200
+	salvo_interval = 2
+	#Splash damage to targets around the impact.
+	#Mod default: 6
+	#Range: 0 ~ 10000
+	splash_damage = 6
+	#Splash radius in blocks.
+	#Mod default: 2.2
+	#Range: 0 ~ 64
+	splash_radius = 2.2
+	#Missile: degrees it can turn per tick while homing.
+	#Mod default: 11
+	#Range: 0 ~ 180
+	turn_rate = 11
+
+#Tesla Coil Turret
+[tesla]
+	#Targeting range in blocks.
+	#Mod default: 16
+	#Range: 0.5 ~ 256
+	range = 16
+	#Ticks between shots (lower = faster).
+	#Mod default: 18
+	#Range: 0.5 ~ 12000
+	fire_interval = 18
+	#Damage per hit.
+	#Mod default: 10
+	#Range: 0 ~ 10000
+	damage = 16
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#This weapon uses no ammo items (it runs on FE or loads its own rounds), so this stays 0.
+	#Mod default: 0
+	#Range: 0 ~ 0
+	ammo_per_shot = 0
+	#Degrees the weapon turns per tick.
+	#Mod default: 0
+	#Range: 0 ~ 180
+	turn_speed = 0
+	#Degrees off target it still fires at.
+	#Mod default: 180
+	#Range: 0 ~ 180
+	aim_tolerance = 180
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 0
+	#Range: 0 ~ 200
+	aim_lock_ticks = 0
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: 0
+	#Range: -90 ~ 90
+	min_pitch = 0
+	#Highest barrel angle in degrees.
+	#Mod default: 0
+	#Range: -90 ~ 90
+	max_pitch = 0
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Lightning bolts per discharge.
+	#Mod default: 5
+	#Range: 1 ~ 64
+	bolts = 5
+	#Most bolts one target takes per discharge.
+	#Mod default: 2
+	#Range: 1 ~ 64
+	bolts_per_target = 2
+	#Ticks it charges before each shot.
+	#Mod default: 12
+	#Range: 0 ~ 12000
+	charge_ticks = 12
+	#FE the turret's capacitor holds.
+	#Mod default: 60000
+	#Range: 0 ~ 3000000
+	energy_capacity = 10000
+	#FE per shot.
+	#Mod default: 3000
+	#Range: 0 ~ 10000000
+	energy_per_shot = 10000
+	#Most FE it takes in per transfer.
+	#Mod default: 1000
+	#Range: 0 ~ 10000000
+	max_input = 1000
+
+#Railgun Turret
+[railgun]
+	#Targeting range in blocks.
+	#Mod default: 80
+	#Range: 0.5 ~ 256
+	range = 80
+	#Ticks between shots (lower = faster).
+	#Mod default: 40
+	#Range: 0.5 ~ 12000
+	fire_interval = 40
+	#Damage per hit.
+	#Mod default: 60
+	#Range: 0 ~ 10000
+	damage = 60
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 3
+	#Range: 0 ~ 180
+	turn_speed = 3
+	#Degrees off target it still fires at.
+	#Mod default: 1.5
+	#Range: 0 ~ 180
+	aim_tolerance = 1.5
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 4
+	#Range: 0 ~ 200
+	aim_lock_ticks = 4
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -30
+	#Range: -90 ~ 90
+	min_pitch = -30
+	#Highest barrel angle in degrees.
+	#Mod default: 60
+	#Range: -90 ~ 90
+	max_pitch = 60
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Damage multiplier against bosses.
+	#Mod default: 2
+	#Range: 0 ~ 100
+	boss_multiplier = 2
+	#Ticks it charges before each shot.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	charge_ticks = 60
+	#FE the turret's capacitor holds.
+	#Mod default: 80000
+	#Range: 0 ~ 3000000
+	energy_capacity = 80000
+	#FE per shot.
+	#Mod default: 8000
+	#Range: 0 ~ 10000000
+	energy_per_shot = 8000
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+	#Most FE it takes in per transfer.
+	#Mod default: 2000
+	#Range: 0 ~ 10000000
+	max_input = 2000
+	#Closest distance in blocks it fires at.
+	#Mod default: 5
+	#Range: 0 ~ 256
+	min_range = 5
+	#How hard the impact's shockwave throws mobs.
+	#Mod default: 2.5
+	#Range: 0 ~ 100
+	shock_knockback = 2.5
+	#Reach of the impact's shockwave in blocks.
+	#Mod default: 4
+	#Range: 0 ~ 64
+	shock_radius = 4
+	#Slug speed in blocks per tick.
+	#Mod default: 40
+	#Range: 0.01 ~ 100
+	slug_speed = 40
+
+#Mortar Turret
+[mortar]
+	#Targeting range in blocks.
+	#Mod default: 40
+	#Range: 0.5 ~ 256
+	range = 40
+	#Ticks between shots (lower = faster).
+	#Mod default: 60
+	#Range: 0.5 ~ 12000
+	fire_interval = 60
+	#Damage per hit.
+	#Mod default: 20
+	#Range: 0 ~ 10000
+	damage = 20
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 4
+	#Range: 0 ~ 180
+	turn_speed = 4
+	#Degrees off target it still fires at.
+	#Mod default: 2
+	#Range: 0 ~ 180
+	aim_tolerance = 2
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 4
+	#Range: 0 ~ 200
+	aim_lock_ticks = 4
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: 45
+	#Range: -90 ~ 90
+	min_pitch = 45
+	#Highest barrel angle in degrees.
+	#Mod default: 86
+	#Range: -90 ~ 90
+	max_pitch = 86
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Blast radius in blocks.
+	#Mod default: 1.5
+	#Range: 0 ~ 64
+	blast_radius = 1.5
+	#Damage per second while burning.
+	#Mod default: 3
+	#Range: 0 ~ 10000
+	burn_damage = 3
+	#Ticks a target keeps burning.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	burn_ticks = 60
+	#Ticks a fire patch burns.
+	#Mod default: 100
+	#Range: 0 ~ 12000
+	fire_ticks = 100
+	#Shell gravity in blocks per tick per tick.
+	#Mod default: 0.05
+	#Range: 0.001 ~ 1
+	gravity = 0.05
+	#Knockback strength (Repulsor: about how many blocks a target is thrown; Repulsor Dome: that at the edge of its reach, +1 block per block closer).
+	#Mod default: 0.4
+	#Range: 0 ~ 100
+	knockback = 0.4
+	#Closest distance in blocks it fires at.
+	#Mod default: 8
+	#Range: 0 ~ 256
+	min_range = 8
+	#Side of the fire patch in blocks.
+	#Mod default: 3
+	#Range: 1 ~ 15
+	patch_size = 3
+	#Shell launch speed in blocks per tick.
+	#Mod default: 1.5
+	#Range: 0.01 ~ 100
+	shell_speed = 1.5
+
+#Repulsor Dome
+[repulsor_dome]
+	#Targeting range in blocks.
+	#Mod default: 9
+	#Range: 0.5 ~ 256
+	range = 9
+	#Ticks between shots (lower = faster).
+	#Mod default: 80
+	#Range: 0.5 ~ 12000
+	fire_interval = 80
+	#Damage per hit.
+	#Mod default: 0
+	#Range: 0 ~ 10000
+	damage = 0
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#This weapon uses no ammo items (it runs on FE or loads its own rounds), so this stays 0.
+	#Mod default: 0
+	#Range: 0 ~ 0
+	ammo_per_shot = 0
+	#Degrees the weapon turns per tick.
+	#Mod default: 0
+	#Range: 0 ~ 180
+	turn_speed = 0
+	#Degrees off target it still fires at.
+	#Mod default: 180
+	#Range: 0 ~ 180
+	aim_tolerance = 180
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 0
+	#Range: 0 ~ 200
+	aim_lock_ticks = 0
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: 0
+	#Range: -90 ~ 90
+	min_pitch = 0
+	#Highest barrel angle in degrees.
+	#Mod default: 0
+	#Range: -90 ~ 90
+	max_pitch = 0
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Ticks it charges before each shot.
+	#Mod default: 10
+	#Range: 0 ~ 12000
+	charge_ticks = 10
+	#FE the turret's capacitor holds.
+	#Mod default: 40000
+	#Range: 0 ~ 3000000
+	energy_capacity = 40000
+	#FE per shot.
+	#Mod default: 2000
+	#Range: 0 ~ 10000000
+	energy_per_shot = 10000
+	#Knockback strength (Repulsor: about how many blocks a target is thrown; Repulsor Dome: that at the edge of its reach, +1 block per block closer).
+	#Mod default: 6
+	#Range: 0 ~ 100
+	knockback = 6
+	#Upward push.
+	#Mod default: 0.35
+	#Range: 0 ~ 10
+	lift = 0.35
+	#Most FE it takes in per transfer.
+	#Mod default: 2000
+	#Range: 0 ~ 10000000
+	max_input = 2000
+	#Most targets one burst pushes.
+	#Mod default: 64
+	#Range: 1 ~ 1024
+	max_targets = 64
+
+#Plasma Cannon Turret
+[plasma_cannon]
+	#Targeting range in blocks.
+	#Mod default: 40
+	#Range: 0.5 ~ 256
+	range = 40
+	#Ticks between shots (lower = faster).
+	#Mod default: 30
+	#Range: 0.5 ~ 12000
+	fire_interval = 30
+	#Damage per hit.
+	#Mod default: 18
+	#Range: 0 ~ 10000
+	damage = 18
+	#Inaccuracy in degrees.
+	#Mod default: 0
+	#Range: 0 ~ 90
+	spread = 0
+	#Ammo items used per shot (0.5 = one item every two shots; a shot never takes more than one).
+	#Mod default: 1
+	#Range: 0 ~ 1
+	ammo_per_shot = 1
+	#Degrees the weapon turns per tick.
+	#Mod default: 4
+	#Range: 0 ~ 180
+	turn_speed = 4
+	#Degrees off target it still fires at.
+	#Mod default: 1.5
+	#Range: 0 ~ 180
+	aim_tolerance = 1.5
+	#Ticks it must stay on target before its first shot.
+	#Mod default: 4
+	#Range: 0 ~ 200
+	aim_lock_ticks = 4
+	#Lowest barrel angle in degrees (negative = down).
+	#Mod default: -30
+	#Range: -90 ~ 90
+	min_pitch = -30
+	#Highest barrel angle in degrees.
+	#Mod default: 60
+	#Range: -90 ~ 90
+	max_pitch = 60
+	#Degrees off aim it keeps firing while a burst swings to the next target (0 = aim_tolerance).
+	#Mod default: 0
+	#Range: 0 ~ 180
+	sweep_tolerance = 0
+	#Heat added per shot (0 = never overheats).
+	#Mod default: 0
+	#Range: 0 ~ 1000
+	heat_per_shot = 0
+	#Heat lost per second.
+	#Mod default: 0
+	#Range: 0 ~ 100000
+	heat_dissipation_per_second = 0
+	#Heat at which it overheats.
+	#Mod default: 100
+	#Range: 1 ~ 3000
+	max_heat = 100
+	#Ticks it stays locked after overheating.
+	#Mod default: 60
+	#Range: 0 ~ 12000
+	overheat_ticks = 60
+	#Blast damage at the centre (half at the edge).
+	#Mod default: 14
+	#Range: 0 ~ 10000
+	blast_damage = 14
+	#Blast radius in blocks.
+	#Mod default: 4
+	#Range: 0 ~ 64
+	blast_radius = 4
+	#Ticks it charges before each shot.
+	#Mod default: 20
+	#Range: 0 ~ 12000
+	charge_ticks = 20
+	#How well it aims ahead of moving targets (0 = not at all, 1 = perfectly).
+	#Mod default: 0.9
+	#Range: 0 ~ 1
+	lead_accuracy = 0.9
+	#Closest distance in blocks it fires at.
+	#Mod default: 4
+	#Range: 0 ~ 256
+	min_range = 4
+	#Plasma ball speed in blocks per tick.
+	#Mod default: 0.8
+	#Range: 0.01 ~ 100
+	orb_speed = 0.8
+

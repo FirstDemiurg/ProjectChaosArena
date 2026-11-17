@@ -1,0 +1,65 @@
+#Only the owner and trusted players may open a turret GUI, remove its weapon or reconfigure it (PLAN 4.7).
+ownerProtection = true
+#Whether the owner and trusted players can damage their own turret.
+trustedCanDamage = false
+#Whether hostile mobs seek out and attack turrets (players still take priority).
+mobsAttackTurrets = true
+#Ticks between a mob's hurt sounds when turrets hit it (each turret hit is a fresh hit; 0 = a sound per hit).
+#Range: 0 ~ 200
+turretHurtSoundInterval = 10
+#Volume of a mob's hurt sound when turrets hit it, relative to normal (its death sound is unchanged).
+#Range: 0.0 ~ 1.0
+turretHurtSoundVolume = 0.5
+#Max HP of a Large Turret Base (2x2) relative to a standard base of the same tier.
+#Range: 0.1 ~ 100.0
+largeBaseHealthMultiplier = 2.5
+#FE a workstation stores (PLAN Fase 9).
+#Range: > 1000
+workstationEnergyCapacity = 50000
+#Most FE a workstation accepts per tick.
+#Range: > 1
+workstationMaxInput = 2000
+#Whether Mortar shells set burnable blocks in their fire patch on (vanilla) fire. The patch burns mobs and players either way.
+mortarBlockFire = true
+#FE each Feed Hub block stores; a merged structure holds this times its blocks.
+#Range: > 0
+feedHubEnergyCapacity = 50000
+#Most FE each Feed Hub block accepts per tick; a merged structure takes this times its blocks.
+#Range: > 0
+feedHubMaxInput = 4000
+#Ammo items each Feed Hub block moves into its turrets per tick.
+#Range: 1 ~ 64
+feedHubItemsPerTick = 8
+#Mobs too big or heavy for the Repulsor: it never fires at them, and the Repulsor Dome throws them only
+#repulsorHeavyMobPush of its push (their vanilla knockback resistance is ignored). Entity ids; add big mobs from
+#other mods here, e.g. "somemod:stone_giant".
+repulsorHeavyMobs = ["minecraft:iron_golem", "minecraft:ravager", "minecraft:warden"]
+#Share of the Repulsor Dome's push that heavy mobs (repulsorHeavyMobs) still get: 0.4 = 60 % less.
+#Range: 0.0 ~ 1.0
+repulsorHeavyMobPush = 0.4
+#FE a Turret Control Hub's Interface stores (PLAN "Turret Control Hub").
+#Range: > 0
+controlHubEnergyCapacity = 200000
+#Most FE each Hub Power Port takes from cables per tick.
+#Range: > 0
+controlHubPortMaxInput = 2000
+#FE per tick a formed Control Hub uses, per Satellite Uplink tier T1, T2, T3; without it the hub goes offline.
+controlHubUpkeep = [20, 60, 150]
+#An offline Control Hub comes back online once it holds this many ticks of upkeep (fed less than its upkeep, it would flip on and off every tick).
+#Range: 1 ~ 1200
+controlHubRestartTicks = 100
+#Side of the square of chunks a Control Hub reaches, centred on its satellite's chunk, per tier T1, T2, T3 (odd).
+controlHubRange = [1, 3, 7]
+#Range of a turret while a player controls it through an Overwatch Link, relative to its own (modules included).
+#A Mortar's shells still only fly as far as their speed allows.
+#Range: 1.0 ~ 4.0
+overwatchRangeMultiplier = 1.5
+
+[tiers]
+	#Max HP per tier T1, T2, T3.
+	health = [8.0, 12.0, 20.0]
+	#HP regenerated per second per tier.
+	regenPerSecond = [0.05, 0.1, 0.15]
+	#Turn speed multiplier per tier.
+	turnSpeedMultiplier = [1.0, 1.15, 1.3]
+

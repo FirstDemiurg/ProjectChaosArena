@@ -1,0 +1,3762 @@
+#Respect server.properties pvp and scoreboard teams as well
+allowPvP = true
+#Range: 0.01 ~ 10.0
+damageScale = 0.7
+#Range: 0.01 ~ 10.0
+healthScale = 0.45
+#Fallback XP per point of damage when the target-specific rate is negative.
+#Range: 0.0 ~ 100.0
+experiencePerDamage = 80.0
+#Range: 0 ~ 100000
+mobKillExperience = 1200
+#Range: 0 ~ 100000
+playerKillExperience = 2400
+#XP per point of damage to non-player targets. Negative values use experiencePerDamage. 0 disables this reward.
+#Range: -1.0 ~ 100.0
+experiencePerDamageToMobs = -0.5
+#XP per point of damage to players. Negative values use experiencePerDamage. 0 disables this reward.
+#Range: -1.0 ~ 100.0
+experiencePerDamageToPlayers = -1.0
+
+[statConversion]
+	#Minecraft max health = Cobblemon HP × this coefficient
+	#Range: 0.01 ~ 10.0
+	hpToMinecraftHealth = 0.8
+	#Physical damage multiplier per native Attack point
+	#Range: 0.01 ~ 10.0
+	attackToDamage = 0.1
+	#Special damage multiplier per native Special Attack point
+	#Range: 0.01 ~ 10.0
+	specialAttackToDamage = 0.1
+	#Physical mitigation uses native Defense × this coefficient
+	#Range: 0.01 ~ 10.0
+	defenseToResistance = 0.7
+	#Magic mitigation uses native Special Defense × this coefficient
+	#Range: 0.01 ~ 10.0
+	specialDefenseToResistance = 0.7
+	#Native Speed influence on cooldown; 1 preserves current formula
+	#Range: 0.0 ~ 5.0
+	speedToCooldown = 1.0
+	#Native Speed bonus to movement speed per point above 50
+	#Range: 0.0 ~ 0.02
+	speedToMovement = 5.0E-4
+
+[attacks]
+
+	[attacks.agility]
+		type = "BUFF"
+		effect = "SPEED"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.airslash]
+		type = "PROJECTILE"
+		effect = "SLOW"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 30
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 18.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.bodyslam]
+		type = "HEAVY_MELEE"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 140
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 40
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.charm]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 10.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.discharge]
+		type = "SELF_AOE"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 180
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 40
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.doubleedge]
+		type = "DASH"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.doubleteam]
+		type = "BUFF"
+		effect = "EVASION"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.dragonbreath]
+		type = "CONE"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.dragonclaw]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.dragonrage]
+		type = "CONE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.earthquake]
+		type = "GROUND_AOE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 400
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 320
+		#Range: 0 ~ 72000
+		windupTicks = 16
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 10.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.electricterrain]
+		type = "SUMMON_TERRAIN"
+		effect = "ELECTRIC_TERRAIN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 500
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 400
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.electroball]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 140
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 80
+		#Range: 0 ~ 72000
+		windupTicks = 4
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.ember]
+		type = "CONE"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 40
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 40
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 6.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.feint]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.firefang]
+		type = "MELEE"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 80
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 40
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.15
+
+	[attacks.firespin]
+		type = "PROJECTILE"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 14.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.flameburst]
+		type = "TARGET_AOE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 180
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 14.0
+		#Range: 0.0 ~ 64.0
+		radius = 2.5
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.flamethrower]
+		type = "BEAM"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.65
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.flareblitz]
+		type = "DASH"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 280
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 200
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.grassyterrain]
+		type = "SUMMON_TERRAIN"
+		effect = "GRASS_TERRAIN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 500
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 400
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.growl]
+		type = "DEBUFF"
+		effect = "WEAKEN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.growth]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.heatwave]
+		type = "CONE"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 10.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.inferno]
+		type = "CONE"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 400
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 300
+		#Range: 0 ~ 72000
+		windupTicks = 16
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.irontail]
+		type = "HEAVY_MELEE"
+		effect = "DEFENSE_DOWN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.leechseed]
+		type = "DOT"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 280
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.lightscreen]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 400
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 300
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.magicalleaf]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.metalclaw]
+		type = "MELEE"
+		effect = "SELF_STRENGTH"
+		#Range: 0 ~ 72000
+		cooldownTicks = 80
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 40
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.nastyplot]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.nuzzle]
+		type = "MELEE"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 80
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 40
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 50
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 2.8
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.petalblizzard]
+		type = "TARGET_AOE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 16
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.petaldance]
+		type = "SELF_AOE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.playnice]
+		type = "DEBUFF"
+		effect = "WEAKEN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 10.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.poisonpowder]
+		type = "CONE"
+		effect = "POISON"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 180
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 6.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.powerwhip]
+		type = "HEAVY_MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 5.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.protect]
+		type = "SHIELD"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 300
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 40
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.psychic]
+		type = "PULL_KNOCKBACK"
+		effect = "PULL"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 180
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.quickattack]
+		type = "DASH"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.rage]
+		type = "MELEE"
+		effect = "RAGE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 80
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.razorleaf]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 14.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.rest]
+		type = "HEAL"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 600
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 480
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.roar]
+		type = "PULL_KNOCKBACK"
+		effect = "PUSH"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.scaryface]
+		type = "DEBUFF"
+		effect = "SLOW"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 10.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.scratch]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 20
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.seedbomb]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 140
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 80
+		#Range: 0 ~ 72000
+		windupTicks = 4
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.shadowclaw]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 80
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.slam]
+		type = "HEAVY_MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 80
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.slash]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.sleeppowder]
+		type = "CONE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 280
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 6.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.smokescreen]
+		type = "CONE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 140
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 7.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.solarbeam]
+		type = "BEAM"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 280
+		#Range: 0 ~ 72000
+		windupTicks = 20
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.65
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.spark]
+		type = "MELEE"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.sweetkiss]
+		type = "DEBUFF"
+		effect = "CONFUSE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 280
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 200
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.sweetscent]
+		type = "CONE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 7.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.swift]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 14.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.swordsdance]
+		type = "BUFF"
+		effect = "STRENGTH"
+		#Range: 0 ~ 72000
+		cooldownTicks = 400
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 320
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.synthesis]
+		type = "HEAL"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 500
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 400
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.tackle]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 40
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 2.8
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.tailwhip]
+		type = "DEBUFF"
+		effect = "DEFENSE_DOWN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 10.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.takedown]
+		type = "DASH"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 8.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.thunder]
+		type = "TARGET_AOE"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 280
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 200
+		#Range: 0 ~ 72000
+		windupTicks = 20
+		#Range: 0 ~ 72000
+		effectDurationTicks = 50
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 3.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.thunderbolt]
+		type = "HITSCAN"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 40
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.thunderpunch]
+		type = "MELEE"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.thundershock]
+		type = "HITSCAN"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 20
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 40
+		#Range: -1.0 ~ 1000.0
+		power = 3.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.thunderwave]
+		type = "HITSCAN"
+		effect = "PARALYZE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.toxic]
+		type = "DOT"
+		effect = "POISON"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 280
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 240
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.vinewhip]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 20
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 5.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.wildcharge]
+		type = "DASH"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.wingattack]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 0
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 4.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.0
+
+	[attacks.worryseed]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 280
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 200
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.aquajet]
+		type = "DASH"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.aquaring]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.aquatail]
+		type = "HEAVY_MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.attract]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.aurasphere]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.avalanche]
+		type = "HEAVY_MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.bide]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 400
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 320
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.bite]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.blizzard]
+		type = "TARGET_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.block]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.bodypress]
+		type = "HEAVY_MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.brickbreak]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.brine]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.bubble]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.bubblebeam]
+		type = "BEAM"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.55
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.bulldoze]
+		type = "GROUND_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.captivate]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.celebrate]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 80
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 40
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 20
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.chillingwater]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.confide]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.confusion]
+		type = "HITSCAN"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.counter]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.crunch]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.2
+
+	[attacks.curse]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.darkpulse]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.2
+
+	[attacks.defensecurl]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.dig]
+		type = "DASH"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.dive]
+		type = "DASH"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.dragonpulse]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.dragontail]
+		type = "HEAVY_MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.dynamicpunch]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.endure]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 40
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.facade]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.fakeout]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.falseswipe]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.fissure]
+		type = "GROUND_AOE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 600
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 480
+		#Range: 0 ~ 72000
+		windupTicks = 24
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.flail]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.flashcannon]
+		type = "BEAM"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.55
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.fling]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.flipturn]
+		type = "DASH"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.focusblast]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 260
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.focuspunch]
+		type = "HEAVY_MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 30
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.followme]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 10.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.foresight]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.frustration]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.gigaimpact]
+		type = "DASH"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 600
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 480
+		#Range: 0 ~ 72000
+		windupTicks = 24
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.gyroball]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.hail]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 500
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 400
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 300
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 8.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.haze]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 6.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.headbutt]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.helpinghand]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 6.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.hiddenpower]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.hydrocannon]
+		type = "BEAM"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 600
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 480
+		#Range: 0 ~ 72000
+		windupTicks = 24
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.55
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.hydropump]
+		type = "BEAM"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 280
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 200
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.8
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.hyperbeam]
+		type = "BEAM"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 600
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 480
+		#Range: 0 ~ 72000
+		windupTicks = 24
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.55
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.icebeam]
+		type = "BEAM"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.55
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.icepunch]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.icespinner]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.icywind]
+		type = "CONE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.irondefense]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.lifedew]
+		type = "HEAL"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 6.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.liquidation]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.2
+
+	[attacks.megakick]
+		type = "HEAVY_MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 260
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.megapunch]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.mimic]
+		type = "HITSCAN"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.mirrorcoat]
+		type = "HITSCAN"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.mist]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.muddywater]
+		type = "CONE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.mudshot]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.mudslap]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.mudsport]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 8.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.naturalgift]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.outrage]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 260
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.poweruppunch]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.raindance]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 500
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 400
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 300
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 8.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.rapidspin]
+		type = "SELF_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 120
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.reflect]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.refresh]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.return]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.rockclimb]
+		type = "HEAVY_MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.2
+
+	[attacks.rockslide]
+		type = "TARGET_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.rocksmash]
+		type = "MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.5
+
+	[attacks.rocktomb]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.rollout]
+		type = "DASH"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.round]
+		type = "SELF_AOE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.scald]
+		type = "BEAM"
+		effect = "BURN"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.55
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.secretpower]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.seismictoss]
+		type = "MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.shellsmash]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.signalbeam]
+		type = "BEAM"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 8
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 20.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.55
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.1
+
+	[attacks.skullbash]
+		type = "HEAVY_MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 160
+		#Range: 0 ~ 72000
+		windupTicks = 20
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.sleeptalk]
+		type = "SELF_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.smackdown]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.snore]
+		type = "SELF_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 160
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 100
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 5.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.3
+
+	[attacks.strength]
+		type = "HEAVY_MELEE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.submission]
+		type = "HEAVY_MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.substitute]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.surf]
+		type = "CONE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 140
+		#Range: 0 ~ 72000
+		windupTicks = 6
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.swagger]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.terablast]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.terrainpulse]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.waterfall]
+		type = "DASH"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.2
+
+	[attacks.watergun]
+		type = "PROJECTILE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.waterpledge]
+		type = "GROUND_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 60
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.waterpulse]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 80
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.2
+
+	[attacks.waterspout]
+		type = "TARGET_AOE"
+		effect = "NONE"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 260
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.wavecrash]
+		type = "DASH"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 320
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 260
+		#Range: 0 ~ 72000
+		windupTicks = 5
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 9.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.weatherball]
+		type = "PROJECTILE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 60
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.whirlpool]
+		type = "TARGET_AOE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 240
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 20
+		#Range: 0 ~ 72000
+		windupTicks = 12
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 16.0
+		#Range: 0.0 ~ 64.0
+		radius = 4.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.withdraw]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.workup]
+		type = "BUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 360
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 240
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 160
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 0.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.yawn]
+		type = "DEBUFF"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 200
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 120
+		#Range: 0 ~ 72000
+		windupTicks = 0
+		#Range: 0 ~ 72000
+		effectDurationTicks = 100
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 12.0
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 1.0
+
+	[attacks.zenheadbutt]
+		type = "HEAVY_MELEE"
+		effect = "CUSTOM"
+		#Range: 0 ~ 72000
+		cooldownTicks = 120
+		#Range: 0 ~ 72000
+		cooldownFloorTicks = 60
+		#Range: 0 ~ 72000
+		windupTicks = 10
+		#Range: 0 ~ 72000
+		effectDurationTicks = 12
+		#Range: -1.0 ~ 1000.0
+		power = -1.0
+		#Range: 0.0 ~ 128.0
+		range = 3.5
+		#Range: 0.0 ~ 64.0
+		radius = 0.0
+		#Range: 0.0 ~ 1.0
+		effectChance = 0.2
+
+[killExperience]
+	#Kill bonus = base kill XP * multiplier * coefficient for the Pokemon's current level. Base kill XP: mobKillExperience for mobs, playerKillExperience for players. Damage XP is unchanged.
+	#Range: 0.0 ~ 1000000.0
+	multiplier = 0.005
+	#100 entries: index 0 = level 1, index 99 = level 100. Default = full native XP cost of L -> L+1 / native XP cost of 1 -> 2. Empty/short lists use native defaults for missing levels; 1.0 makes a level's kill bonus unscaled; 0.0 disables its kill bonus. Native maximum level still applies.
+	fast = [1.0, 2.5, 5.0, 8.166666666666666, 12.0, 17.0, 22.5, 29.0, 36.166666666666664, 44.0, 53.0, 62.5, 73.0, 84.16666666666667, 96.0, 109.0, 122.5, 137.0, 152.16666666666666, 168.0, 185.0, 202.5, 221.0, 240.16666666666666, 260.0, 281.0, 302.5, 325.0, 348.1666666666667, 372.0, 397.0, 422.5, 449.0, 476.1666666666667, 504.0, 533.0, 562.5, 593.0, 624.1666666666666, 656.0, 689.0, 722.5, 757.0, 792.1666666666666, 828.0, 865.0, 902.5, 941.0, 980.1666666666666, 1020.0, 1061.0, 1102.5, 1145.0, 1188.1666666666667, 1232.0, 1277.0, 1322.5, 1369.0, 1416.1666666666667, 1464.0, 1513.0, 1562.5, 1613.0, 1664.1666666666667, 1716.0, 1769.0, 1822.5, 1877.0, 1932.1666666666667, 1988.0, 2045.0, 2102.5, 2161.0, 2220.1666666666665, 2280.0, 2341.0, 2402.5, 2465.0, 2528.1666666666665, 2592.0, 2657.0, 2722.5, 2789.0, 2856.1666666666665, 2924.0, 2993.0, 3062.5, 3133.0, 3204.1666666666665, 3276.0, 3349.0, 3422.5, 3497.0, 3572.1666666666665, 3648.0, 3725.0, 3802.5, 3881.0, 3960.1666666666665, 4040.0]
+	#100 entries: index 0 = level 1, index 99 = level 100. Default = full native XP cost of L -> L+1 / native XP cost of 1 -> 2. Empty/short lists use native defaults for missing levels; 1.0 makes a level's kill bonus unscaled; 0.0 disables its kill bonus. Native maximum level still applies.
+	medium_fast = [1.0, 2.375, 4.625, 7.625, 11.375, 15.875, 21.125, 27.125, 33.875, 41.375, 49.625, 58.625, 68.375, 78.875, 90.125, 102.125, 114.875, 128.375, 142.625, 157.625, 173.375, 189.875, 207.125, 225.125, 243.875, 263.375, 283.625, 304.625, 326.375, 348.875, 372.125, 396.125, 420.875, 446.375, 472.625, 499.625, 527.375, 555.875, 585.125, 615.125, 645.875, 677.375, 709.625, 742.625, 776.375, 810.875, 846.125, 882.125, 918.875, 956.375, 994.625, 1033.625, 1073.375, 1113.875, 1155.125, 1197.125, 1239.875, 1283.375, 1327.625, 1372.625, 1418.375, 1464.875, 1512.125, 1560.125, 1608.875, 1658.375, 1708.625, 1759.625, 1811.375, 1863.875, 1917.125, 1971.125, 2025.875, 2081.375, 2137.625, 2194.625, 2252.375, 2310.875, 2370.125, 2430.125, 2490.875, 2552.375, 2614.625, 2677.625, 2741.375, 2805.875, 2871.125, 2937.125, 3003.875, 3071.375, 3139.625, 3208.625, 3278.375, 3348.875, 3420.125, 3492.125, 3564.875, 3638.375, 3712.625, 3787.625]
+	#100 entries: index 0 = level 1, index 99 = level 100. Default = full native XP cost of L -> L+1 / native XP cost of 1 -> 2. Empty/short lists use native defaults for missing levels; 1.0 makes a level's kill bonus unscaled; 0.0 disables its kill bonus. Native maximum level still applies.
+	medium_slow = [1.0, 5.333333333333333, 4.333333333333333, 4.333333333333333, 4.888888888888889, 6.333333333333333, 8.666666666666666, 11.666666666666666, 15.666666666666666, 20.22222222222222, 25.666666666666668, 32.0, 39.0, 47.0, 55.55555555555556, 65.0, 75.33333333333333, 86.33333333333333, 98.33333333333333, 110.88888888888889, 124.33333333333333, 138.66666666666666, 153.66666666666666, 169.66666666666666, 186.22222222222223, 203.66666666666666, 222.0, 241.0, 261.0, 281.55555555555554, 303.0, 325.3333333333333, 348.3333333333333, 372.3333333333333, 396.8888888888889, 422.3333333333333, 448.6666666666667, 475.6666666666667, 503.6666666666667, 532.2222222222222, 561.6666666666666, 592.0, 623.0, 655.0, 687.5555555555555, 721.0, 755.3333333333334, 790.3333333333334, 826.3333333333334, 862.8888888888889, 900.3333333333334, 938.6666666666666, 977.6666666666666, 1017.6666666666666, 1058.2222222222222, 1099.6666666666667, 1142.0, 1185.0, 1229.0, 1273.5555555555557, 1319.0, 1365.3333333333333, 1412.3333333333333, 1460.3333333333333, 1508.888888888889, 1558.3333333333333, 1608.6666666666667, 1659.6666666666667, 1711.6666666666667, 1764.2222222222222, 1817.6666666666667, 1872.0, 1927.0, 1983.0, 2039.5555555555557, 2097.0, 2155.3333333333335, 2214.3333333333335, 2274.3333333333335, 2334.8888888888887, 2396.3333333333335, 2458.6666666666665, 2521.6666666666665, 2585.6666666666665, 2650.222222222222, 2715.6666666666665, 2782.0, 2849.0, 2917.0, 2985.5555555555557, 3055.0, 3125.3333333333335, 3196.3333333333335, 3268.3333333333335, 3340.8888888888887, 3414.3333333333335, 3488.6666666666665, 3563.6666666666665, 3639.6666666666665, 3716.222222222222]
+	#100 entries: index 0 = level 1, index 99 = level 100. Default = full native XP cost of L -> L+1 / native XP cost of 1 -> 2. Empty/short lists use native defaults for missing levels; 1.0 makes a level's kill bonus unscaled; 0.0 disables its kill bonus. Native maximum level still applies.
+	slow = [1.0, 2.3, 4.7, 7.6, 11.4, 15.8, 21.2, 27.1, 33.9, 41.3, 49.7, 58.6, 68.4, 78.8, 90.2, 102.1, 114.9, 128.3, 142.7, 157.6, 173.4, 189.8, 207.2, 225.1, 243.9, 263.3, 283.7, 304.6, 326.4, 348.8, 372.2, 396.1, 420.9, 446.3, 472.7, 499.6, 527.4, 555.8, 585.2, 615.1, 645.9, 677.3, 709.7, 742.6, 776.4, 810.8, 846.2, 882.1, 918.9, 956.3, 994.7, 1033.6, 1073.4, 1113.8, 1155.2, 1197.1, 1239.9, 1283.3, 1327.7, 1372.6, 1418.4, 1464.8, 1512.2, 1560.1, 1608.9, 1658.3, 1708.7, 1759.6, 1811.4, 1863.8, 1917.2, 1971.1, 2025.9, 2081.3, 2137.7, 2194.6, 2252.4, 2310.8, 2370.2, 2430.1, 2490.9, 2552.3, 2614.7, 2677.6, 2741.4, 2805.8, 2871.2, 2937.1, 3003.9, 3071.3, 3139.7, 3208.6, 3278.4, 3348.8, 3420.2, 3492.1, 3564.9, 3638.3, 3712.7, 3787.6]
+	#100 entries: index 0 = level 1, index 99 = level 100. Default = full native XP cost of L -> L+1 / native XP cost of 1 -> 2. Empty/short lists use native defaults for missing levels; 1.0 makes a level's kill bonus unscaled; 0.0 disables its kill bonus. Native maximum level still applies.
+	erratic = [1.0, 2.466666666666667, 4.666666666666667, 7.666666666666667, 11.266666666666667, 15.4, 20.333333333333332, 25.6, 31.6, 37.93333333333333, 44.8, 52.06666666666667, 59.8, 67.86666666666666, 76.26666666666667, 84.93333333333334, 93.93333333333334, 103.13333333333334, 112.6, 122.13333333333334, 131.86666666666667, 141.8, 151.66666666666666, 161.66666666666666, 171.66666666666666, 181.66666666666666, 191.53333333333333, 201.46666666666667, 211.2, 220.73333333333332, 230.2, 239.4, 248.4, 257.06666666666666, 265.46666666666664, 273.53333333333336, 281.26666666666665, 288.53333333333336, 295.4, 301.73333333333335, 307.73333333333335, 313.0, 317.93333333333334, 322.06666666666666, 325.6666666666667, 328.6666666666667, 330.8666666666667, 332.4, 333.26666666666665, 421.6, 431.4, 441.0, 450.3333333333333, 459.4, 468.2, 476.6666666666667, 484.93333333333334, 492.73333333333335, 500.4, 507.53333333333336, 514.3333333333334, 520.8, 526.8666666666667, 532.5333333333333, 537.6666666666666, 542.4666666666667, 560.6666666666666, 624.2, 633.9333333333333, 643.4666666666667, 652.7333333333333, 661.8666666666667, 670.5333333333333, 679.1333333333333, 687.2666666666667, 695.2666666666667, 702.8666666666667, 710.1333333333333, 717.1333333333333, 723.7333333333333, 730.0666666666667, 735.9333333333333, 741.5333333333333, 746.7333333333333, 751.4666666666667, 755.8666666666667, 759.8, 763.3333333333334, 766.5333333333333, 769.1333333333333, 771.3333333333334, 773.0666666666667, 774.3333333333334, 775.1333333333333, 775.4, 775.2, 732.6, 556.2, 541.2, 525.1333333333333]
+	#100 entries: index 0 = level 1, index 99 = level 100. Default = full native XP cost of L -> L+1 / native XP cost of 1 -> 2. Empty/short lists use native defaults for missing levels; 1.0 makes a level's kill bonus unscaled; 0.0 disables its kill bonus. Native maximum level still applies.
+	fluctuating = [1.0, 2.25, 4.75, 8.25, 11.75, 16.5, 24.5, 29.25, 36.75, 51.25, 55.5, 65.75, 90.25, 91.5, 125.0, 147.25, 171.5, 198.5, 228.5, 260.5, 296.0, 334.25, 375.75, 420.25, 468.25, 520.0, 574.75, 633.75, 696.5, 762.75, 833.75, 908.5, 987.75, 1071.5, 1159.75, 999.25, 1329.0, 1134.0, 1513.75, 1279.25, 1714.0, 1436.0, 1930.25, 1604.25, 2163.5, 1784.0, 2414.5, 1975.75, 2683.5, 2180.5, 2970.75, 2398.0, 3277.5, 2628.75, 3604.25, 2873.0, 3951.25, 3131.5, 4319.5, 3404.0, 4709.25, 3691.5, 5121.25, 3994.0, 5556.0, 4311.75, 6014.75, 4645.25, 6497.25, 4995.0, 7004.25, 5361.5, 7536.5, 5744.5, 8094.75, 6145.0, 8679.25, 6563.0, 9291.25, 6998.75, 9930.5, 7453.0, 10598.0, 7926.0, 11294.75, 8417.5, 12020.75, 8928.75, 12777.0, 9459.75, 13563.5, 10010.75, 14381.5, 10582.5, 15231.25, 11174.75, 16113.75, 11788.25, 17029.0, 12423.25]
+

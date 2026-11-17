@@ -1,0 +1,124 @@
+{
+  "anubis_memories": {
+    "mem1": "roundabout:anubis_item/0/{}/[]",
+    "mem2": "roundabout:anubis_item/0/{1_15_1_3_40_1_3_41_0_1_48_0_5_58_1_5_65_0_5_78_1_5_85_0_1_99_1_1_125_0_14_133_1_14_135_0_14_147_1_14_148_0_14_162_1_14_164_0_14_176_1_14_197_0_}/[34.0_0.74_0.61_35.0_0.74_0.14_36.0_0.74_0.43_37.0_0.13_0.0_38.0_0.3_0.16_44.0_0.15_0.0_45.0_0.74_0.0_46.0_0.74_0.14_47.0_1.34_0.73_48.0_1.05_0.88_49.0_1.94_1.21_50.0_1.19_0.74_51.0_1.21_0.28_52.0_0.74_0.0_53.0_0.59_0.0_54.0_0.29_0.0_58.0_0.15_0.0_61.0_0.15_-0.15_62.0_0.0_-0.29_63.0_-0.31_-0.13_64.0_0.0_-0.16_65.0_0.0_-0.15_77.0_-0.74_0.31_78.0_-0.74_-0.16_79.0_0.0_-0.15_80.0_0.0_0.31_81.0_0.15_0.0_84.0_0.29_0.0_85.0_2.11_-0.76_88.0_0.0_0.31_89.0_-2.7_2.1_90.0_1.34_1.49_91.0_2.54_-2.56_95.0_-0.88_-0.28_96.0_-3.46_-0.46_97.0_-0.28_-1.35_98.0_-0.6_0.0_99.0_-0.14_-0.28_100.0_0.0_-0.16_101.0_-0.15_-0.28_102.0_-0.15_-0.29_103.0_-0.14_-0.14_104.0_-1.19_-0.46_105.0_-1.05_0.0_106.0_-0.88_0.0_107.0_-0.61_-0.13_108.0_-0.88_0.0_109.0_-0.61_0.0_110.0_-0.88_0.59_111.0_-0.46_0.28_112.0_-0.28_0.15_113.0_-0.46_0.28_114.0_-0.43_0.16_115.0_-0.31_0.13_116.0_-0.28_0.29_117.0_-0.14_0.31_118.0_-0.15_0.0_119.0_-0.3_0.13_122.0_-0.13_0.0_123.0_-0.3_0.0_124.0_-1.65_0.59_125.0_-4.03_0.15_126.0_-3.3_0.0_127.0_-5.24_-0.28_128.0_-2.71_0.0_129.0_-0.88_0.13_130.0_-0.46_0.15_136.0_0.0_0.0_144.0_0.16_-0.15_176.0_0.13_-0.13_177.0_0.29_-0.16_179.0_0.15_0.0_]",
+    "mem3": "roundabout:anubis_item/0/{}/[]",
+    "mem4": "roundabout:anubis_item/0/{}/[]",
+    "mem5": "roundabout:anubis_item/0/{}/[]",
+    "mem6": "roundabout:anubis_item/0/{}/[]",
+    "mem7": "roundabout:anubis_item/0/{}/[]",
+    "mem8": "roundabout:anubis_item/0/{}/[]"
+  },
+  "green_day_ally_list": {
+    "ally_list_u_u_i_d_s": ""
+  },
+  "general_settings": {
+    "only_stand_users_can_see_stands": true,
+    "advanced_epitaph_shader": true,
+    "epitaph_screen_effect": true,
+    "epitaph_see_present_entities_and_particles": false,
+    "alternate_epitaph": false,
+    "time_erase_red_projections": false,
+    "time_erase_blocks": true,
+    "can_see_fated_self": false,
+    "time_skip_opacity": 0.6,
+    "bites_the_dust_opacity": 0.6
+  },
+  "pressing_ability_keys_summons_stands": true,
+  "enable_picky_icon_rendering": false,
+  "max_mirror_renders_at_once_set_to_zero_to_disable": 50,
+  "mirror_flips_rendering": false,
+  "render_gas_splatter_overlay": false,
+  "vampire_o_s_t_change": true,
+  "show_creative_text_on_worthiness_arrow": true,
+  "justice_fog_brightness": 100,
+  "render_justice_hands_while_piloting": true,
+  "render_armor_on_player_clone_abilities": true,
+  "blink_with_camo": true,
+  "magicians_red_textures_make_it_emmissive": true,
+  "magicians_red_lashes_make_it_emmissive": false,
+  "magicians_red_render_on_fire_in_first_person": true,
+  "mandom_rewind_shows_visual_effects_to_non_mandom_users": true,
+  "mandom_rewind_attempts_to_skip_interpolation": true,
+  "tusk_uses_shoot_mode": true,
+  "invisible_block_depth_f": 0.44,
+  "invisible_blocks_distance_away_seen_i": 50,
+  "ability_icon_hud_is_animated": true,
+  "ability_icon_hud_x": 174,
+  "ability_icon_hud_y": 5,
+  "enable_bowler_hat_render": true,
+  "enable_road_roller_render": true,
+  "config_settings": {
+    "config_button_offset_x": 0,
+    "config_button_offset_y": 0,
+    "should_show_config_button": true
+  },
+  "particle_settings": {
+    "render_justice_particles_in_first_person": true,
+    "render_justice_particles_while_piloting_in_first_person": false,
+    "justice_fog_particles_per_tick": 5,
+    "justice_skin_flame_particles_per_tick": 3,
+    "cfh_ticks_per_flame_particle": 3,
+    "body_bag_holding_particles_per_five_ticks": 1,
+    "magicians_red_firestorm_embers_rate": 0.01,
+    "meteors_emit_particles": true,
+    "punch_impact_size": 0.46,
+    "punch_impact_opacity": 0.82
+  },
+  "opacity_settings": {
+    "opacity_of_stand": 100.0,
+    "opacity_while_attacking": 100.0,
+    "opacity_of_others": 100.0,
+    "opacity_of_player_barrage_arms": 0.5,
+    "opacity_of_player_stand_arms": 1.0
+  },
+  "dynamic_settings": {
+    "soft_and_wet_currently_selected_bubble": 3,
+    "ratt_firing_mode": false,
+    "hide_g_u_i": false,
+    "vampire_vision_mode": true,
+    "current_power_inventory_tab": 2,
+    "killer_queen_current_bomb_config": 10,
+    "killer_queen_current_bomb_size": 1,
+    "gold_experience_current_animal": 1
+  },
+  "vanilla_minecraft_tweaks": {
+    "named_s_b_r_horse_skins": true,
+    "only_stand_users_can_see_vanilla_ghost_mobs": false,
+    "disable_obvious_experimental_warning": true
+  },
+  "anubis_settings": {
+    "anubis_pogo_counter": false
+  },
+  "time_stop_settings": {
+    "time_stop_freezes_screen": false,
+    "ts_stands_see_t_s_teleport_and_dont_freeze": true,
+    "advanced_time_stop_shader": true,
+    "simple_time_stop_shader": true
+  },
+  "killer_queen_settings": {
+    "bomb_overlay_hide_on_f1": true,
+    "bomb_config_fast_toggle": true,
+    "item_tools_protection": true
+  },
+  "whitesnake_settings": {
+    "force_third_person_in_control_mode": false,
+    "hallucination_indicator": true
+  },
+  "diver_down_settings": {
+    "custom_diver_down_workbench": true,
+    "force_third_person_in_ground_dive": false
+  },
+  "silver_chariot_settings": {
+    "silver_chariot_force_third_person_in_control_mode": false,
+    "silver_chariot_render_afterimages": true,
+    "silver_chariot_afterimages_max_amount": 5,
+    "silver_chariot_tick_interval_between_afterimage": 10,
+    "silver_chariot_should_render_afterimages_for_user_while_in_first_person": true
+  },
+  "lyin_eyes_settings": {
+    "spin_map_instead_of_arrow": false,
+    "nematode_opacity": 1.0,
+    "map_opacity": 1.0
+  }
+}

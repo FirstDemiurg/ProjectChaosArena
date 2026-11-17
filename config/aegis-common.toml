@@ -1,0 +1,41 @@
+#HP removed by an intercepted projectile whose damage cannot be obtained generically.
+#Custom hitscan weapons need a mod-specific integration if they do not fire Forge damage events.
+#Range: 0.1 ~ 1000000.0
+unknownProjectileDamage = 6.0
+#Per-entity projectile damage overrides, e.g. minecraft:snowball=1.0.
+#These override even the built-in arrow damage estimator.
+projectileDamageOverrides = []
+
+[small]
+	#Maximum shield HP. Restart the server after editing.
+	#Range: 1.0 ~ 1000000.0
+	maxHealth = 60.0
+	#Passive FE per game tick; multiply by 20 for FE per second.
+	#Range: 0 ~ 1000000
+	passiveFePerTick = 2
+	#Additional FE per tick while regenerating. Emergency recovery uses twice this amount plus passive.
+	#Range: 0 ~ 1000000
+	activeFePerTick = 10
+
+[medium]
+	#Maximum shield HP. Restart the server after editing.
+	#Range: 1.0 ~ 1000000.0
+	maxHealth = 120.0
+	#Passive FE per game tick; multiply by 20 for FE per second.
+	#Range: 0 ~ 1000000
+	passiveFePerTick = 4
+	#Additional FE per tick while regenerating. Emergency recovery uses twice this amount plus passive.
+	#Range: 0 ~ 1000000
+	activeFePerTick = 16
+
+[large]
+	#Maximum shield HP. Restart the server after editing.
+	#Range: 1.0 ~ 1000000.0
+	maxHealth = 160.0
+	#Passive FE per game tick; multiply by 20 for FE per second.
+	#Range: 0 ~ 1000000
+	passiveFePerTick = 6
+	#Additional FE per tick while regenerating. Emergency recovery uses twice this amount plus passive.
+	#Range: 0 ~ 1000000
+	activeFePerTick = 24
+
