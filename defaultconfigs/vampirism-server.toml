@@ -17,7 +17,7 @@
 	#Whether players can infect other players
 	playersCanTurnPlayers = true
 	#Whether to color player names in chat based on their current faction
-	factionColorInChat = true
+	factionColorInChat = false
 	#Whether to add a prefix title based on the current lord level to the player names
 	lordPrefixInChat = true
 	#Changes if entities are recognized as hostile by other mods. See https://github.com/TeamLapen/Vampirism/issues/199. Smart falls back to Never on servers 
