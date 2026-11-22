@@ -1,0 +1,121 @@
+{
+  "ripperdoc_cinematic_enabled": false,
+  "ripperdoc_cinematic_first_only": false,
+  "ripperdoc_sequence_trigger_slots": [
+    "os"
+  ],
+  "afterimage_max_rendered_snapshots": 28,
+  "afterimage_max_history_snapshots": 200,
+  "afterimage_min_sample_interval_seconds": 0.05,
+  "cyberpsychosis_duration_scale": 4,
+  "temporal_bubble_radius": 24.0,
+  "temporal_query_epsilon": 1.0E-4,
+  "temporal_sync_radius_chunks": 4,
+  "temporal_debug_overlay_default": false,
+  "allow_cyberware_natural_regeneration": false,
+  "give_guide_on_first_join": false,
+  "cyberpsychosis_enabled": true,
+  "parcool_compat_enabled": true,
+  "parcool_cyberware_bonuses": true,
+  "sandevistan_you_speed_conversion": 0.08823529411764706,
+  "sandevistan_you_speed_limit": 2.0,
+  "sandevistan_fall_slowdown": 0.0,
+  "sandevistan_you_time_cost": 1.0,
+  "berserk_health_floor": 0.25,
+  "berserk_heal_per_kill": 0.25,
+  "berserk_duration_multipliers": {
+    "moore_tech": 1.0,
+    "biodyne": 1.0,
+    "zetatech": 1.0,
+    "militech": 1.0
+  },
+  "berserk_cooldown_multipliers": {
+    "moore_tech": 1.0,
+    "biodyne": 1.0,
+    "zetatech": 1.0,
+    "militech": 1.0
+  },
+  "berserk_reduction_multipliers": {
+    "moore_tech": 1.0,
+    "biodyne": 1.0,
+    "zetatech": 1.0,
+    "militech": 1.0
+  },
+  "sandevistan_slow_pct_overrides": {
+    "sandevistan_warp_dancer": 0.2,
+    "sandevistan_zetatech": 0.3,
+    "sandevistan_dynalar": 0.5,
+    "sandevistan_falcon": 0.7,
+    "sandevistan_apogee": 0.85
+  },
+  "sandevistan_duration_seconds_overrides": {
+    "sandevistan_warp_dancer": {
+      "base": 9.0,
+      "upgrade_1": 9.3,
+      "upgrade_2": 9.5,
+      "upgrade_3": 9.8,
+      "upgrade_4": 10.0
+    },
+    "sandevistan_zetatech": {
+      "base": 6.0
+    },
+    "sandevistan_dynalar": {
+      "base": 8.0,
+      "upgrade_1": 8.3,
+      "upgrade_2": 8.5,
+      "upgrade_3": 8.8,
+      "upgrade_4": 9.0
+    },
+    "sandevistan_falcon": {
+      "base": 9.0,
+      "upgrade_1": 9.2,
+      "upgrade_2": 9.4,
+      "upgrade_3": 9.6,
+      "upgrade_4": 9.8,
+      "upgrade_5": 10.0
+    },
+    "sandevistan_apogee": {
+      "base": 6.0,
+      "upgrade_1": 6.3,
+      "upgrade_2": 6.7,
+      "upgrade_3": 7.0
+    }
+  },
+  "sandevistan_cooldown_seconds_overrides": {
+    "sandevistan_warp_dancer": {
+      "base": 70.0,
+      "upgrade_1": 63.0,
+      "upgrade_2": 55.0,
+      "upgrade_3": 48.0,
+      "upgrade_4": 40.0
+    },
+    "sandevistan_zetatech": {
+      "base": 45.0,
+      "upgrade_1": 44.0,
+      "upgrade_2": 43.0,
+      "upgrade_3": 41.0,
+      "upgrade_4": 40.0
+    },
+    "sandevistan_dynalar": {
+      "base": 55.0,
+      "upgrade_1": 53.0,
+      "upgrade_2": 50.0,
+      "upgrade_3": 48.0,
+      "upgrade_4": 45.0
+    },
+    "sandevistan_falcon": {
+      "base": 40.0,
+      "upgrade_1": 38.0,
+      "upgrade_2": 36.0,
+      "upgrade_3": 34.0,
+      "upgrade_4": 32.0,
+      "upgrade_5": 30.0
+    },
+    "sandevistan_apogee": {
+      "base": 30.0,
+      "upgrade_1": 27.0,
+      "upgrade_2": 25.0,
+      "upgrade_3": 22.0
+    }
+  }
+}

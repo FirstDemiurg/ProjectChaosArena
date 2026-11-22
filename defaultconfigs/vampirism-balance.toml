@@ -219,7 +219,7 @@
 		jumpBoost = 1
 		#Squared blood vision distance
 		#Range: > 5
-		bloodVisionDistanceSq = 6400
+		bloodVisionDistanceSq = 14 400
 		#Basic skill - Weapon cooldown = 1/(oldvalue*(1+modifier))
 		#Range: 0.0 ~ 3.0
 		smallAttackSpeedModifier = 0.15
@@ -227,7 +227,7 @@
 	[balance.vampire_refinements]
 		#For every kill the rage duration is extended by this amount. In seconds.
 		#Range: > 0
-		rageFuryDurationBonus = 5
+		rageFuryDurationBonus = 3
 		#Range: 1.0 ~ 1.7976931348623157E308
 		teleportDistanceMod = 1.5
 		#Range: 1.0 ~ 2.147483647E9
@@ -375,7 +375,7 @@
 		rageCooldown = 60
 		#In seconds
 		#Range: 1 ~ 10000
-		rageMinDuration = 8
+		rageMinDuration = 5
 		disguiseEnabled = true
 		#In seconds
 		#Range: > 1
@@ -426,7 +426,7 @@
 		#In seconds. Modified by godly_vampirism
 		#Range: > 1
 		teleportCooldown = 30
-		rageEnabled = false
+		rageEnabled = true
 		jumpBoostEnabled = true
 		hissingEnabled = true
 		freezeEnabled = true
@@ -456,7 +456,7 @@
 		batEnabled = false
 		#In seconds. Increase per vampire level. Modified by godly_vampirism
 		#Range: 0 ~ 1000
-		rageDurationIncrease = 10
+		rageDurationIncrease = 1
 		#null. Modified by godly_vampirism
 		#Range: 1 ~ 1000
 		teleportMaxDistance = 150

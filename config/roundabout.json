@@ -532,7 +532,7 @@
   "anubis_settings": {
     "enable_anubis": true,
     "anubis_attack_mult_on_players": 140,
-    "anubis_attack_mult_on_mobs": 280,
+    "anubis_attack_mult_on_mobs": 180,
     "anubis_guard_points": 15,
     "anubis_backflip_cooldown": 260,
     "anubis_max_memory": 300,
@@ -708,7 +708,7 @@
   "the_world_settings": {
     "enable_the_world": true,
     "the_world_attack_mult_on_mobs": 140,
-    "the_world_attack_mult_on_players": 280,
+    "the_world_attack_mult_on_players": 180,
     "the_world_guard_points": 15,
     "mining_speed_multiplier_the_world": 100,
     "get_mining_tier_the_world": 0,
@@ -719,7 +719,7 @@
   "star_platinum_settings": {
     "enable_star_platinum": true,
     "star_platinum_attack_mult_on_mobs": 140,
-    "star_platinum_attack_mult_on_players": 280,
+    "star_platinum_attack_mult_on_players": 180,
     "star_platinum_guard_points": 15,
     "mining_speed_multiplier_star_platinum": 100,
     "get_mining_tier_star_platinum": 0,

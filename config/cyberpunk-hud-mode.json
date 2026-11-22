@@ -1,0 +1,15 @@
+{
+  "configVersion": 3,
+  "mode": "FULL",
+  "combatBars": "AUTO",
+  "targetCard": "AUTO",
+  "prompts": "AUTO",
+  "abilityBar": "ALWAYS",
+  "abilityBarFooter": false,
+  "chipLayout": "ROW",
+  "chipShow": "ACTIVE",
+  "chipReadout": false,
+  "inventoryDetails": true,
+  "toasts": true,
+  "cards": {}
+}

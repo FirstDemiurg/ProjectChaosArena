@@ -16,13 +16,13 @@
 ["Umbrellas Speed"]
 	#The Speed Modifier of the Umbrella. Set to 0 to disable.
 	#Range: -1.0 ~ 1.0
-	ironUmbrellaSpeed = -0.7
+	ironUmbrellaSpeed = -0.75
 	#The Speed Modifier of the Umbrella. Set to 0 to disable.
 	#Range: -1.0 ~ 1.0
-	goldUmbrellaSpeed = -0.7
+	goldUmbrellaSpeed = -0.75
 	#The Speed Modifier of the Umbrella. Set to 0 to disable.
 	#Range: -1.0 ~ 1.0
-	diamondUmbrellaSpeed = -0.7
+	diamondUmbrellaSpeed = -0.75
 	#The Speed Modifier of the Umbrella. Set to 0 to disable.
 	#Range: -1.0 ~ 1.0
 	netheriteUmbrellaSpeed = -0.0

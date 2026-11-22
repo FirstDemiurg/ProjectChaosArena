@@ -1,0 +1,7 @@
+{
+  "groundCracks": true,
+  "groundDust": true,
+  "swingTrails": true,
+  "cameraShake": 0.7,
+  "reducedFlashes": false
+}

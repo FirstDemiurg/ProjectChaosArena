@@ -1,0 +1,22 @@
+{
+  "phase4_chance": 1.0,
+  "phase5_chance": 1.0,
+  "interruption_cooldown_seconds": 0.0,
+  "rules_version": 4,
+  "false_awakening_max_seconds": 20.0,
+  "false_awakening_min_seconds": 10.0,
+  "phase5_insomnia": true,
+  "lucid_rest_seconds": 300.0,
+  "resisted_rest_seconds": 150.0,
+  "hangover_seconds": 120.0,
+  "rest_pressure": -40.0,
+  "hangover_pressure": 20.0,
+  "hangover_follow_up_bonus": 0.15,
+  "rest_symptom_frequency": 0.35,
+  "hangover_symptom_frequency": 1.5,
+  "sleepwalk_neutral_chance": 0.2,
+  "sleepwalk_resisted_chance": 0.15,
+  "sleepwalk_defeat_chance": 0.35,
+  "sleepwalk_depth_bonus": 0.1,
+  "sleepwalk_max_chance": 0.6
+}

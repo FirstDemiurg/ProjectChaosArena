@@ -1,0 +1,10 @@
+{
+  "configVersion": 3,
+  "activationMode": "TOGGLE",
+  "toggleEnabled": true,
+  "animationSpeed": "NORMAL",
+  "frameAnimationStyle": "UPWARD",
+  "implantRowMode": "WRAP",
+  "implantsPerRow": 6,
+  "maxImplantRows": 3
+}
