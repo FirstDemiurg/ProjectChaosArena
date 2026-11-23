@@ -219,7 +219,7 @@
 		jumpBoost = 1
 		#Squared blood vision distance
 		#Range: > 5
-		bloodVisionDistanceSq = 14 400
+		bloodVisionDistanceSq = 14400
 		#Basic skill - Weapon cooldown = 1/(oldvalue*(1+modifier))
 		#Range: 0.0 ~ 3.0
 		smallAttackSpeedModifier = 0.15
