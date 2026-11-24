@@ -29,8 +29,8 @@
 			"enabled": true
 		},
 		"shortSword": {
-			"baseAttackDamage": 2.8,
-			"baseAttackSpeed": 1.8000000476837158,
+			"baseAttackDamage": 2.799999952316284,
+			"baseAttackSpeed": 1.8000000715255737,
 			"bonusAttackReach": 0.0,
 			"sizeFactor": 0.0,
 			"weight": 0.8999999761581421,

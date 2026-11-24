@@ -22,7 +22,7 @@
   "identityErase": true,
   "armedAllies": true,
   "deathEchoes": true,
-  "neonMessages": false,
+  "neonMessages": true,
   "skyEye": true,
   "bloodHallucination": true,
   "stableAssaultCamera": false,

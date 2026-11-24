@@ -13,9 +13,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:flurry"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -27,9 +25,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:flurry"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -41,9 +37,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:ground_slam"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -55,9 +49,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:ground_slam"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -69,9 +61,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:whirlwind"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -83,9 +73,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:whirlwind"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -97,9 +85,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:thrust"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -111,9 +97,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:thrust"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -125,9 +109,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:impale"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -139,9 +121,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:impale"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -153,9 +133,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:swipe"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -167,9 +145,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:swipe"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -181,9 +157,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:fan_of_knives"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -195,9 +169,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:fan_of_knives"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -209,9 +181,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:smash"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -223,9 +193,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:smash"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -237,9 +205,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:cleave"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -251,9 +217,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:cleave"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
@@ -265,9 +229,7 @@
           "pool": "",
           "slot": "",
           "max_spell_count": 0,
-          "spell_ids": [
-            "rpg_series:swift_strikes"
-          ],
+          "spell_ids": [],
           "extra_tier_binding": 0
         }
       },
