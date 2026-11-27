@@ -211,7 +211,7 @@
 			"enabled": true
 		},
 		"heavyMace": {
-			"baseAttackDamage": 4.800000190734863,
+			"baseAttackDamage": 5.800000190734863,
 			"baseAttackSpeed": 1.149999976158142,
 			"bonusAttackReach": 0.0,
 			"sizeFactor": 0.05000000074505806,
@@ -253,7 +253,7 @@
 			"enabled": true
 		},
 		"morningstar": {
-			"baseAttackDamage": 4.699999809265137,
+			"baseAttackDamage": 5.699999809265137,
 			"baseAttackSpeed": 1.25,
 			"bonusAttackReach": 0.0,
 			"sizeFactor": 0.05000000074505806,
