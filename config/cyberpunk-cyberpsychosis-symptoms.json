@@ -1,6 +1,6 @@
 {
-  "visualFrequency": 5.0,
-  "visualDuration": 2.0,
-  "neuralFrequency": 5.0,
-  "neuralDuration": 2.0
+  "visualFrequency": 1.0,
+  "visualDuration": 1.0,
+  "neuralFrequency": 2.5,
+  "neuralDuration": 1.5
 }

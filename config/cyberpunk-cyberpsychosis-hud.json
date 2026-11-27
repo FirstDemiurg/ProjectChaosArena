@@ -5,7 +5,7 @@
   "showEpisodeOverlay": true,
   "showDebugValues": false,
   "reducedFlashes": false,
-  "flashbacks": "FULL",
+  "flashbacks": "NONE",
   "cameraTremor": true,
   "tunnelVision": true,
   "neuralPostProcessing": true,
