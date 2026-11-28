@@ -5,6 +5,6 @@
   "irons_spellbooks:min_rarity": "uncommon",
   "irons_spellbooks:max_level": 5,
   "irons_spellbooks:enabled": true,
-  "irons_spellbooks:mana_cost_multiplier": 1.2,
+  "irons_spellbooks:mana_cost_multiplier": 1.4,
   "irons_spellbooks:allow_crafting": true
 }

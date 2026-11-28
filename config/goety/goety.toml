@@ -87,7 +87,7 @@
 	animalSouls = 1
 	#Multiplies the amount of Souls taken by this amount, Default: 2
 	#Range: > 1
-	soulTakenMultiplier = 1
+	soulTakenMultiplier = 3
 	#Non-Undead Piglin Killed, Default: 10
 	#Range: > 0
 	piglinSouls = 10

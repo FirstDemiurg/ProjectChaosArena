@@ -6,5 +6,5 @@
   "irons_spellbooks:allow_crafting": true,
   "irons_spellbooks:cooldown_in_seconds": 90.0,
   "irons_spellbooks:min_rarity": "uncommon",
-  "irons_spellbooks:mana_cost_multiplier": 1.2
+  "irons_spellbooks:mana_cost_multiplier": 1.4
 }
